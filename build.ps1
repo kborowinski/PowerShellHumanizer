@@ -140,7 +140,7 @@ function Build {
     }
 
     New-Item -Path "$publish/en-US" -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
-    Copy-Item -Path "$src/en-US" -Destination "$publish/en-US" -Recurse
+    Copy-Item -Path "$src/en-US" -Destination "$publish" -Recurse
 
     if ($PSBoundParameters.ContainsKey('Prerelease')) {
         $manifest.Add('Prerelease', $PreRelease)

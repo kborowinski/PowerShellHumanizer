@@ -1,5 +1,5 @@
 TOPIC
-    About PowerShell Humanizer
+    about_PowerShellHumanizer
 
 SHORT DESCRIPTION
     This PowerShell module wraps [Mehdi Khalili's .NET Humanizer](https://github.com/MehdiK/Humanizer).
