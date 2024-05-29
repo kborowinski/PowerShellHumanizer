@@ -9,7 +9,6 @@ on:
       - 'Videos/**'
       - 'Changelog.md'
       - 'README.md'
-      - src/internal/Export-HelpToMd.ps1
   pull_request:
 
 permissions:
