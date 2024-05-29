@@ -125,7 +125,7 @@ Describe 'Type Extension Methods' {
         It 'Should display Now as now when UTC is false' {
             (Get-Date).Humanize() | Should -Be 'now'
         }
-        It 'Should display Now as hours ago when UTC is true' -Skip:($env:CI) {
+        It 'Should display Now as hours ago when UTC is true' -Skip:($env:CI -eq 'True') {
             (Get-Date).Humanize($true) | Should -Match 'hours'
         }
     }
