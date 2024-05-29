@@ -48,10 +48,10 @@ Describe 'Functions' {
 
     Context 'Number to ordinal words' {
         It 'Should convert to words' {
-            ConvertTo-OrdinalWords 121 | Should -Be 'hundred and twenty-first'
+            ConvertTo-OrdinalWord 121 | Should -Be 'hundred and twenty-first'
         }
         It 'Should convert a range to words' {
-            $output = 120..122 | ConvertTo-OrdinalWords
+            $output = 120..122 | ConvertTo-OrdinalWord
             $output[0] | Should -Be 'hundred and twentieth'
             $output[1] | Should -Be 'hundred and twenty-first'
             $output[2] | Should -Be 'hundred and twenty-second'
