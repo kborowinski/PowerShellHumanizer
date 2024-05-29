@@ -74,6 +74,19 @@ jobs:
       matrix:
         pwshv: ['7.2', '7.3']
 
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download build output
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: publish
+
+      - name: Test
+        shell: pwsh
+        run: ./build.ps1 test
+
   test7-current:
     permissions:
       contents: read # for actions/checkout to fetch code
