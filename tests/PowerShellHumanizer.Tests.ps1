@@ -57,6 +57,16 @@ Describe 'Functions' {
             $output[2] | Should -Be 'hundred and twenty-second'
         }
     }
+
+    Context 'Quantity' {
+        It 'Should return <expected> with -quantity <quant> -string <string>' -ForEach @(
+            @{quant = 1; string = 'widgets'; expected = 'one widget' }
+            @{quant = 2; string = 'widgets'; expected = 'two widgets' }
+        ) {
+            $result = ConvertTo-Quantity -quantity $quant -string $string -showQuantityAs "Words"
+            $result | Should -Be $expected
+        }
+    }
 }
 
 Describe 'Type Extension Methods' {
