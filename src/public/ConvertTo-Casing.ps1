@@ -12,6 +12,8 @@
     the Powershell Gallery
 #>
 function ConvertTo-Casing {
+    [CmdletBinding()]
+    [OutputType('string')]
     param(
         [Parameter(Mandatory, Position = 0, ValueFromPipeline)]
         [string[]]$Target,

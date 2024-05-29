@@ -4,7 +4,7 @@
 .DESCRIPTION
     Return the correct plurality of a string for a given quantity.
 .PARAMETER String
-    A string.
+    A string to convert.
 .PARAMETER Quantity
     A quantity of $String.
 .PARAMETER ShowQuantityAs
@@ -21,6 +21,7 @@
 #>
 function ConvertTo-Quantity {
     [CmdletBinding()]
+    [OutputType('string')]
     param(
         [Parameter(Mandatory, Position = 0, ValueFromPipeline)]
         [string]$String,
@@ -29,6 +30,7 @@ function ConvertTo-Quantity {
         [Alias('Count')]
         [int]$Quantity,
 
+        [Parameter(Position = 2)]
         [Humanizer.ShowQuantityAs]
         $ShowQuantityAs = [Humanizer.ShowQuantityAs]::Numeric
     )

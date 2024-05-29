@@ -73,7 +73,7 @@ $manifest = @{
     #RequiredModules      = @( )
     #CmdletsToExport      = ''
     #VariablesToExport    = ''
-    #AliasesToExport      = @()
+    AliasesToExport      = @('ConvertTo-DateWord','Kabab','Pluralize')
 
 }
 

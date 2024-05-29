@@ -59,7 +59,7 @@ Describe 'Functions' {
     }
 
     Context 'Quantity' {
-        It 'Should return <expected> with -quantity <quant> -string <string>' -ForEach @(
+        It 'Should return "<expected>" with -quantity <quant> -string "<string>"' -ForEach @(
             @{quant = 1; string = 'widgets'; expected = 'one widget' }
             @{quant = 2; string = 'widgets'; expected = 'two widgets' }
         ) {
