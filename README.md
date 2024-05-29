@@ -18,6 +18,13 @@ Install-Module -Name PowerShellHumanizer
 ```
 
 ## What's new
+
+5/29/2024
+
+No new functionality.
+The Humanizer library has been updated to 3.0.0-beta13.
+Documentation has been added for each command.
+
 4/24/2016
 
 Check out how to call the `Humanize` capabilities.
