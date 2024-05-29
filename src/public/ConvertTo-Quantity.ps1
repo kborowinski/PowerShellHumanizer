@@ -10,13 +10,16 @@
 .PARAMETER ShowQuantityAs
     The format $Quantity should be displayed in. Options are None, Numeric, and Words. Default is Numeric.
 .EXAMPLE
-    ConvertTo-Quantity -quantity 2 -string "widget" -showQuantityAs "Words"
+    ConvertTo-Quantity -Quantity 2 -String "widget" -ShowQuantityAs "Words"
     two widgets
 .EXAMPLE
-    ConvertTo-Quantity -quantity 2 -string "widget"
+    ConvertTo-Quantity -Quantity 1 -String "widget" -ShowQuantityAs "Words"
+    one widget
+.EXAMPLE
+    ConvertTo-Quantity -Quantity 2 -String "widget"
     2 widgets
 .EXAMPLE
-    ConvertTo-Quantity -quantity 2 -string "widget" -showQuantityAs "None"
+    ConvertTo-Quantity -Quantity 2 -String "widget" -ShowQuantityAs "None"
     widgets
 #>
 function ConvertTo-Quantity {

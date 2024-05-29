@@ -17,7 +17,7 @@ Return the correct plurality of a string for a given quantity.
 
 
 ```powershell
-ConvertTo-Quantity -quantity 2 -string "widget" -showQuantityAs "Words"
+ConvertTo-Quantity -Quantity 2 -String "widget" -ShowQuantityAs "Words"
 two widgets
 ```
 ### Example 2
@@ -25,15 +25,23 @@ two widgets
 
 
 ```powershell
-ConvertTo-Quantity -quantity 2 -string "widget"
-2 widgets
+ConvertTo-Quantity -Quantity 1 -String "widget" -ShowQuantityAs "Words"
+one widget
 ```
 ### Example 3
 
 
 
 ```powershell
-ConvertTo-Quantity -quantity 2 -string "widget" -showQuantityAs "None"
+ConvertTo-Quantity -Quantity 2 -String "widget"
+2 widgets
+```
+### Example 4
+
+
+
+```powershell
+ConvertTo-Quantity -Quantity 2 -String "widget" -ShowQuantityAs "None"
 widgets
 ```
 
