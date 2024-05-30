@@ -9,3 +9,11 @@ if ($PSCulture -ne 'en-US') {
     }
 }
 
+if (Get-Module -Name Terminal-Icons -ListAvailable -ErrorAction SilentlyContinue) {
+    Update-FormatData -PrependPath "$PSSCriptRoot/formats/FileInfoIcons.format.ps1xml"
+} else {
+    Update-FormatData -PrependPath "$PSSCriptRoot/formats/FileInfo.format.ps1xml"
+}
+
+Update-FormatData -PrependPath "$PSSCriptRoot/formats/TimeSpan.format.ps1xml"
+

@@ -123,7 +123,7 @@ function Build {
     New-Item -Path "$publish/formats" -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
     foreach ($format in $formats) {
         Copy-Item -Path $format.FullName -Destination "$publish/formats/$($format.Name)"
-        'Update-FormatData -PrependPath "$PSSCriptRoot/formats/{0}"' -f $format.Name | Add-Content "$publish/$module.psm1"
+        #'Update-FormatData -PrependPath "$PSSCriptRoot/formats/{0}"' -f $format.Name | Add-Content "$publish/$module.psm1"
     }
 
     New-Item -Path "$publish/private" -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
