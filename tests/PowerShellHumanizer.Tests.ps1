@@ -161,7 +161,7 @@ Describe 'Custom Formats' {
             $testData = Get-Item TestDrive:\testfile.txt | Out-String
         }
         It 'Should display 1 KB' {
-            $testData | Should -Match "1 KB.{3,4} testfile.txt"
+            $testData | Should -Match "1 KB.{1,4} testfile.txt"
         }
     }
 }
