@@ -5,7 +5,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
 }
 Add-Type -Path "$PSScriptRoot/lib/Humanizer.dll"
 
-if ($PSCulture -ne 'en-US') {
+if ([CultureInfo]::CurrentUICulture.Name -ne 'en-US') {
     $resourcePath = foreach (
         $culture in
             [CultureInfo]::CurrentUICulture,
