@@ -8,20 +8,20 @@
                 <Script>
                     [OutputType([System.String])]
                     param(
-                        [Int]$precision = 1,
-                        [CultureInfo]$culture = [CultureInfo]::CurrentUICulture,
-                        [Humanizer.TimeUnit]$maxUnit = [Humanizer.TimeUnit]::Year,
-                        [String]$collectionSeparator = ', ',
-                        [Boolean]$toWords = $false
+                        [Int]$Precision = 1,
+                        [CultureInfo]$Culture = [CultureInfo]::CurrentUICulture,
+                        [Humanizer.TimeUnit]$MaxUnit = [Humanizer.TimeUnit]::Year,
+                        [String]$CollectionSeparator = ', ',
+                        [Boolean]$ToWords = $false
                     )
                     [Humanizer.TimeSpanHumanizeExtensions]::Humanize(
                         $this,
-                        $precision,
-                        $culture,
-                        $maxUnit,
+                        $Precision,
+                        $Culture,
+                        $MaxUnit,
                         [Humanizer.TimeUnit]::Millisecond,
-                        $collectionSeparator,
-                        $toWords
+                        $CollectionSeparator,
+                        $ToWords
                     )
                 </Script>
             </ScriptMethod>
