@@ -8,8 +8,8 @@ Add-Type -Path "$PSScriptRoot/lib/Humanizer.dll"
 if ($PSCulture -ne 'en-US') {
     $resourcePath = foreach (
         $culture in
-            $PSCulture,
-            [Globalization.CultureInfo]::CurrentCulture.TwoLetterISOLanguageName
+            [CultureInfo]::CurrentUICulture,
+            [CultureInfo]::CurrentUICulture.TwoLetterISOLanguageName
     ) {
         $pathCandidate = "$PSScriptRoot/lib/$culture/Humanizer.resources.dll"
         if (Test-Path $pathCandidate) {

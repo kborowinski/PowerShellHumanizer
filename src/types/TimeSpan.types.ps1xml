@@ -9,7 +9,7 @@
                     [OutputType([System.String])]
                     param(
                         [Int]$precision = 1,
-                        [CultureInfo]$culture = [CultureInfo]::CurrentCulture,
+                        [CultureInfo]$culture = [CultureInfo]::CurrentUICulture,
                         [Humanizer.TimeUnit]$maxUnit = [Humanizer.TimeUnit]::Year,
                         [String]$collectionSeparator = ', ',
                         [Boolean]$toWords = $false
@@ -24,7 +24,7 @@
                         $toWords
                     )
                 </Script>
-            </ScriptMethod>                                                                      
+            </ScriptMethod>
         </Members>
     </Type>
-</Types>            
+</Types>
