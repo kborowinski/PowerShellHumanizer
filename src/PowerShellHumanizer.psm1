@@ -5,6 +5,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
 }
 Add-Type -Path "$PSScriptRoot/lib/Humanizer.dll"
 
+<# Resource files are imported automatically on latest Humanizer.dll
 if ([CultureInfo]::CurrentUICulture.Name -ne 'en-US') {
     $resourcePath = foreach (
         $culture in
@@ -24,6 +25,7 @@ if ([CultureInfo]::CurrentUICulture.Name -ne 'en-US') {
         Write-Warning "Humanizer doesn't currently support '$PSCulture'."
     }
 }
+#>
 
 if (Get-Module -Name Terminal-Icons -ListAvailable -ErrorAction SilentlyContinue) {
     Update-FormatData -PrependPath "$PSSCriptRoot/formats/FileInfoIcons.format.ps1xml"
